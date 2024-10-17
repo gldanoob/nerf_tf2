@@ -9,7 +9,7 @@ dependencies:
     - cudnn=8.0
     - numpy
     - matplotlib
-    - imageio
+    - imageio==2.9.0
     - imageio-ffmpeg
     - configargparse
     - ipywidgets

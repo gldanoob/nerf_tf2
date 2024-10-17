@@ -1,17 +1,21 @@
-# To run: conda env create -f environment.yml
 name: nerf_tf2
 channels:
+    - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
     - conda-forge
 dependencies:
-    - python=3.7
+    - python=3.8
     - pip
     - cudatoolkit=11.0
-    - tensorflow=2.8
+    - cudnn=8.0
     - numpy
     - matplotlib
     - imageio
     - imageio-ffmpeg
     - configargparse
-    - imagemagick
     - ipywidgets
     - tqdm
+    - pip:
+          - tensorflow==2.8
+          - tensorflow-gpu==2.8
+          - protobuf==3.19.0
+          - -i https://pypi.tuna.tsinghua.edu.cn/simple

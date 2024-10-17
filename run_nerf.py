@@ -812,7 +812,8 @@ def train():
         # Rest is logging
         def save_weights(net, prefix, i):
             path = os.path.join(basedir, expname, '{}_{:06d}.npy'.format(prefix, i))
-            np.save(path, net.get_weights())
+            weights = net.get_weights()
+            np.save(path, weights[i])
             print('saved weights at', path)
 
         if i % args.i_weights == 0:
